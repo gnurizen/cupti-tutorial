@@ -9,7 +9,7 @@ endif
 CUDA_INSTALL_PATH ?= /usr/local/cuda-12.9
 CUPTI_INSTALL_PATH ?= $(CUDA_INSTALL_PATH)/extras/CUPTI
 NVCC := "$(CUDA_INSTALL_PATH)/bin/nvcc"
-INCLUDES := -I"$(CUDA_INSTALL_PATH)/include" -I"$(CUPTI_INSTALL_PATH)/include" -I"$(CUPTI_INSTALL_PATH)/samples/common"
+INCLUDES := -I"$(CUDA_INSTALL_PATH)/include" -I"$(CUPTI_INSTALL_PATH)/include" -I../common -I"$(CUPTI_INSTALL_PATH)/samples/common"
 TARGET_ARCH ?= $(HOST_ARCH)
 TARGET_OS ?= $(shell uname | tr A-Z a-z)
 
