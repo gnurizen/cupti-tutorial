@@ -51,6 +51,7 @@ do                                                                              
 
 // Compatibility wrapper for cuCtxCreate API change in CUDA 13
 // CUDA 13+ requires an additional CUctxCreateParams parameter
+#include <cuda.h>
 #if CUDA_VERSION >= 13000
     #define COMPAT_cuCtxCreate(pctx, flags, dev) \
         cuCtxCreate(pctx, NULL, flags, dev)
